@@ -9,9 +9,10 @@ namespace JAMK.IT
     class Jaakaappi
     {
         public bool Liha { get; set; }
-        public double LihaaKiloina { get; set; }
+        public double LihaaKiloina = 0;
         public bool Maito { get; set; }
         public double MaitoaLitroina { get; set; }
+        
         public Jaakaappi()
         {
 
@@ -22,6 +23,17 @@ namespace JAMK.IT
             LihaaKiloina = lihaakiloina;
             Maito = maito;
             MaitoaLitroina = maitoalitroina;
+        }
+        
+        public void LisaaLihaa(bool LIHA, double LIHAAKILOINA)
+        {
+            Console.WriteLine("Lihaa lisätty kilo");
+            Liha = true;
+            LihaaKiloina++;
+        }
+        public void LisaaMaitoa()
+        {
+
         }
     }
 }

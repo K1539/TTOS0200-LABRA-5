@@ -17,6 +17,14 @@ namespace JAMK.IT
     {
         static void Main(string[] args)
         {
+            Jaakaappi jaakaappi = new Jaakaappi();
+            Console.Write("lisätäänkö lihaa ");
+            string vastaus = Console.ReadLine();
+
+            if (vastaus == "yes")
+            {
+                
+            }
         }
     }
 }
