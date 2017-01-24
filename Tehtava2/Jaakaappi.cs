@@ -8,15 +8,12 @@ namespace JAMK.IT
 {
     class Jaakaappi
     {
-        public bool Liha { get; set; }
-        public double LihaaKiloina = 0;
-        public bool Maito { get; set; }
-        public double MaitoaLitroina { get; set; }
-        
-        public Jaakaappi()
-        {
+        static public bool Liha { get; set; }
+        static public double LihaaKiloina = 0;
+        static public bool Maito { get; set; }
+        static public double MaitoaLitroina { get; set; }
 
-        }
+        
         public Jaakaappi(bool liha, double lihaakiloina, bool maito, double maitoalitroina)
         {
             Liha = liha;
@@ -24,16 +21,23 @@ namespace JAMK.IT
             Maito = maito;
             MaitoaLitroina = maitoalitroina;
         }
-        
-        public void LisaaLihaa(bool LIHA, double LIHAAKILOINA)
-        {
-            Console.WriteLine("Lihaa lisätty kilo");
-            Liha = true;
-            LihaaKiloina++;
-        }
-        public void LisaaMaitoa()
+        public Jaakaappi()
         {
 
+        }
+        public static void LisaaLihaa()
+        {
+            Console.WriteLine("  Lihaa lisätty kilo");
+            Liha = true;
+            LihaaKiloina++;
+            Console.WriteLine("     Lihaa yhteensä {0} kiloa", LihaaKiloina);
+        }
+        public static void LisaaMaitoa()
+        {
+            Console.WriteLine("  Maitoa lisätty litra");
+            Maito = true;
+            MaitoaLitroina++;
+            Console.WriteLine("     Maitoa yhteensä {0} litraa", MaitoaLitroina);
         }
     }
 }
