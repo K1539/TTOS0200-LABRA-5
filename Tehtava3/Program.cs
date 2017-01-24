@@ -46,6 +46,7 @@ namespace JAMK.IT
             aikuinen.Ika = 78;
             aikuinen.Paino = 85;
             aikuinen.Pituus = 180;
+            aikuinen.Auto = "Volvo 740";
             //
             Aikuinen aikuinen2 = new Aikuinen();
             aikuinen2.Nimi = "keijo";
@@ -58,9 +59,41 @@ namespace JAMK.IT
             vauva.Ika = 1;
             vauva.Paino = 20;
             vauva.Pituus = 70;
+            vauva.Vaippa = "jalassa";
 
-            Console.WriteLine("Aikuinen1");
+            Console.WriteLine("     Ihminen");
             Console.WriteLine("Nimi : {0}, Ikä : {1}, Paino : {2}, Pituus : {3}", ihminen.Nimi, ihminen.Ika, ihminen.Paino, ihminen.Pituus);
+            Console.WriteLine("Laitetaanko ihminen kasvamaan vuosissa? (yes / no > ");
+            string vastaus = Console.ReadLine();
+            if (vastaus == "yes")
+            {
+                ihminen.Kasva();
+                Console.WriteLine("Nimi : {0}, Ikä : {1}, Paino : {2}, Pituus : {3}", ihminen.Nimi, ihminen.Ika, ihminen.Paino, ihminen.Pituus);
+            }
+            ihminen.Liiku();
+            Console.WriteLine();
+            //
+            Console.WriteLine("     Aikuinen");
+            Console.WriteLine("Nimi : {0}, Ikä : {1}, Paino : {2}, Pituus : {3}, Auto : {4}", aikuinen.Nimi, aikuinen.Ika, aikuinen.Paino, aikuinen.Pituus, aikuinen.Auto);
+            Console.WriteLine("Laitetaanko aikuinen kasvamaan vuosissa? (yes / no > ");
+            vastaus = Console.ReadLine();
+            if (vastaus == "yes")
+            {
+                ihminen.Kasva();
+                Console.WriteLine("Nimi : {0}, Ikä : {1}, Paino : {2}, Pituus : {3}", ihminen.Nimi, ihminen.Ika, ihminen.Paino, ihminen.Pituus);
+            }
+            aikuinen.Liiku();
+            Console.WriteLine();
+            //
+            Console.WriteLine("     Vauva");
+            Console.WriteLine("Nimi : {0}, Ikä : {1}, Paino : {2}, Pituus : {3}, Vaippa : ", vauva.Nimi, vauva.Ika, vauva.Paino, vauva.Pituus, vauva.Vaippa);
+            Console.WriteLine("Laitetaanko vauva liikkumaan? (yes / no > ");
+            vastaus = Console.ReadLine();
+            if (vastaus == "yes")
+            {
+                vauva.Liiku();
+            }
+            
         }
     }
 }
